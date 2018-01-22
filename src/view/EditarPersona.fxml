@@ -9,8 +9,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="280.0" prefWidth="430.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="280.0" prefWidth="430.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.EditarPersonaController">
    <children>
       <GridPane layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="210.0" prefWidth="410.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
          <columnConstraints>
@@ -32,18 +31,18 @@
             <Label text="Ciudad" GridPane.rowIndex="3" />
             <Label text="Código Postal" GridPane.rowIndex="4" />
             <Label text="Fecha de Nacimiento" GridPane.rowIndex="5" />
-            <TextField GridPane.columnIndex="1" />
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="4" />
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <TextField fx:id="nombreTextField" GridPane.columnIndex="1" />
+            <TextField fx:id="apellidosTextField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="direccionTextField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="ciudadTextField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="codigoPostalTextField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="fechaDeNacimientoTextField" GridPane.columnIndex="1" GridPane.rowIndex="5" />
          </children>
       </GridPane>
       <HBox layoutX="265.0" layoutY="241.0" spacing="5.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0">
          <children>
-            <Button mnemonicParsing="false" text="Guardar" />
-            <Button mnemonicParsing="false" text="Cancelar" />
+            <Button mnemonicParsing="false" onAction="#guardar" text="Guardar" />
+            <Button mnemonicParsing="false" onAction="#cancelar" text="Cancelar" />
          </children>
       </HBox>
    </children>
