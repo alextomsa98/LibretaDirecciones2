@@ -12,10 +12,10 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement(name = "personas") //Define el nombre del elemento raíz XML
 public class Empaquetador {
     
-    private List personas;
+    private List <Persona> personas;
     
     @XmlElement(name = "persona") //Opcional para el elemento especificado
-    public List getPersonas(){
+    public List <Persona> getPersonas(){
         return personas;
     }
     
